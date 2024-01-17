@@ -1,6 +1,4 @@
 #include <iostream>
-#include <cstdlib>
-#include <cstring>
 
 struct Player {
     char username[20];
@@ -18,6 +16,7 @@ void separate_players(const char** input, int inputSize, char** output) {
 
     for (int i = 0; i < inputSize; ++i) {
         int rankingScore = players[i].wins + players[i].totalGames + players[i].eliminations;
+
         snprintf(output[i], 30, "%s %d", players[i].username, rankingScore);
     }
 
@@ -29,6 +28,7 @@ int main() {
         "MystiqueHero;1365;6890;15210",
         "Frizz;5400;6200;11000",
         "Ziemniak;9965;11000;73000",
+        "Evel00na;10;10;900",
         "Evel00na;10;10;90"
     };
 
