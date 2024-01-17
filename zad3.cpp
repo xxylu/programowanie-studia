@@ -13,6 +13,13 @@ void convert(float tab[]){
 
 }
 
+void sort(float tab[]){
+    int tabsize = sizeof(tab) / sizeof(tab[0]);
+    for (int i = 0; i < tabsize; i++){
+
+    }
+} 
+
 
 int main(){
     float tab[] = {1.2, 6.1, 1.2, 1.1, 5.4, 3.1};
