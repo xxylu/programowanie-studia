@@ -17,7 +17,6 @@ void separate_players(const char** input, int inputSize, char** output) {
     }
 }
 
-
 int main(){
     
     const char* input[] = {
