@@ -12,12 +12,13 @@ float fun_aux(float a, float b, float c){
 }
 
 int main(){
+    srand(time (NULL));
     int n = 4;
     float* arr = new float[3*n];
     float* arr2 = new float[n];
     std::cout<<"Input: ";
     for(int i = 0; i < 3*n; i++){
-        arr[i] = 1.347*i*5.33;
+        arr[i] = rand() % 100;
         std::cout<<arr[i] << ", ";
     }
 
