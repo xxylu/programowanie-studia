@@ -20,6 +20,7 @@ int main(){
         arr[i] = 1.347*i*5.33;
         std::cout<<arr[i] << ", ";
     }
+
     std::cout<< std::endl;
     std::cout<<"Output: ";
     fun_arr(n, arr, arr2, fun_aux);
