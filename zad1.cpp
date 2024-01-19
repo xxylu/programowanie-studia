@@ -1,10 +1,9 @@
 #include <iostream>
-#include <cstdlib>
 
-void fun_arr(float arr[], float arr2[], float(*fun_aux)(float , float, float)){
-    for (int i = 0; i < 4; i++){
-        arr2[i] = fun_aux(arr[3*i], arr[3*i+1], arr[3*i+2]);
-        std::cout<<arr2[i] << " ";
+void fun_arr(int size,float tab[], float tab2[], float(*fun_aux)(float , float, float)){
+    for (int i = 0; i < size; i++){
+        tab2[i] = fun_aux(tab[3*i], tab[3*i+1], tab[3*i+2]);
+        std::cout<<tab2[i] << ", ";
     }
 }
 
@@ -16,9 +15,14 @@ int main(){
     int n = 4;
     float* arr = new float[3*n];
     float* arr2 = new float[n];
-
-    for(int i = 0; i < 3*n; i++){arr[i] = rand() % 100;}
-    fun_arr(arr, arr2, fun_aux);
+    std::cout<<"Input: ";
+    for(int i = 0; i < 3*n; i++){
+        arr[i] = 1.347*i*5.33;
+        std::cout<<arr[i] << ", ";
+    }
+    std::cout<< std::endl;
+    std::cout<<"Output: ";
+    fun_arr(n, arr, arr2, fun_aux);
 
     delete[] arr;
     delete[] arr2;
