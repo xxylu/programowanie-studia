@@ -20,3 +20,42 @@ Zarezerwuj kilka pokoi w różnych hotelach i wypisz ponownie nazwy hoteli i lic
 pokoi dla każdego z posortowanych hoteli, aby upewnić się, że liczba wolnych pokoi się
 zmieniła.
 */
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Hotel {
+private:
+    string name;
+    int rooms;
+    int reservedRooms;
+    double rate;
+public:
+     Hotel(string name, int rooms, double rate){
+        this -> name = name;
+        this -> rooms = rooms;
+        this -> rate = rate;
+    }
+    int reserveRoom(){ if(reservedRooms < rooms){reservedRooms + 1;}}
+    int cancelReservation(){reservedRooms - 1;}
+    double getRating(){return rate;}
+    int getFreeRooms(){return rooms - reservedRooms;}
+};
+
+void sort(const Hotel* ht, int num, bool(*compareH)(Hotel, Hotel)){
+    for (int i = 0; i < num; i++){
+        
+    }
+};
+
+bool compareH(Hotel* a, Hotel* b){return a->getRating() > b->getRating();}
+
+int main(){
+    int nH = 3;
+    Hotel* ht[] = {new Hotel("H1", 40, 5.6), new Hotel("H2", 10, 3.6), new Hotel("H3", 90, 7.6)};
+    //sort(ht, ht+nH, compareH);
+
+    for (int i = 0; i < nH; i++) delete ht[i];
+    return 0;
+}
