@@ -37,8 +37,8 @@ public:
         this -> rooms = rooms;
         this -> rate = rate;
     }
-    int reserveRoom(){ if(reservedRooms < rooms){reservedRooms + 1;}}
-    int cancelReservation(){reservedRooms - 1;}
+    void reserveRoom(){ if(reservedRooms < rooms){reservedRooms + 1;}}
+    void cancelReservation(){if(reservedRooms > 0){reservedRooms - 1;}}
     double getRating(){return rate;}
     int getFreeRooms(){return rooms - reservedRooms;}
 };
@@ -54,6 +54,8 @@ bool compareH(Hotel* a, Hotel* b){return a->getRating() > b->getRating();}
 int main(){
     int nH = 3;
     Hotel* ht[] = {new Hotel("H1", 40, 5.6), new Hotel("H2", 10, 3.6), new Hotel("H3", 90, 7.6)};
+
+    
     sort(*ht, nH*2, compareH);
 
     for (int i = 0; i < nH; i++) delete ht[i];
