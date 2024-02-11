@@ -28,3 +28,23 @@ bitsPerPixel. Np:
 Dla ułatwienia możemy założyć, że liczba wpisów w pliku nie przekracza 100.
 */
 
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+struct ImageMeta{
+    int width, height, bitsPerPixel;
+    string name;    
+};
+
+void addImageMetaToFile(){
+
+}
+void readImageMetaFromFile(){
+    
+}
+
+int main(){
+
+    return 0;
+}
