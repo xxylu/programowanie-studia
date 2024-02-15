@@ -31,19 +31,23 @@ zwróconego fragmentu tablicy.
 
 short int find_subset(unsigned short int tab[], int size, bool(*)(unsigned short int, int)){
     
+    return true;
 }
 
 bool is_strictly_increasing(unsigned short int tab[], int size){
 
+return true;
 }
 
 bool are_zero_even_bits(unsigned short int tab[], int size){
 
+    return true;
 }
 
 int main(){
     int size = 10;
     unsigned short int* dynamicArray = new unsigned short int[size] {1, 2, 5, 2, 2, 10, 11, 12, 8, 3};
+    is_strictly_increasing(dynamicArray, size);
 
 
     return 0;
