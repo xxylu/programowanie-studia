@@ -7,13 +7,13 @@ using namespace std;
 
 
 int main(){
-    int n;
-    int m;
+    int n = 160;
+    int m = 140;
     int it;
     float temp = 0, temp2 = 0;
     float temp3 = 0;
     cout<<"Enter n and m"<<endl;
-    cin>>n>>m;
+    cout << n << " " << m;
     unsigned int** arr2d= new unsigned int*[n];
     for (int i=0; i<n;i++){
         arr2d[i]=new unsigned int[m*2];
